@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Allerta&family=Anton&family=Archivo+Black&family=Audiowide&family=Baumans&family=Bebas+Neue&family=Caveat+Brush&family=Changa:wght@200..800&family=Dosis:wght@200..800&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kavoon&family=Madimi+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Parkinsans:wght@300..800&family=Play:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Signika:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popupoverlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.popup{
+    border-radius: 10px;
+    height: 260px;
+    padding: 20px 20px;
+    width: 300px;
+    background-color: white;
+    position: fixed;
+    top: -150%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    align-items: center;
+    transform: translate(-50%,-50%);
+}
+#close{
+    margin-top: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+
+
+body.popup-active .popup{
+    top: 50%;
+}
+body.popup-active .popupoverlay{
+    display: block;
+}
+
+#open{
+    padding: 5px 10px;
+    cursor: pointer;
+}
